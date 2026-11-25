@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HopShield</string>
+    <string name="vpn_channel_name">Multi-Hop VPN Tunnel</string>
+    <string name="vpn_channel_description">Shows active multi-hop VPN connection status and throughput</string>
+    <string name="vpn_notification_title">HopShield Tunnel Active</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="nav_tunnel">Tunnel</string>
+    <string name="nav_chains">Chains</string>
+    <string name="nav_inspector">Inspector</string>
+    <string name="nav_settings">Settings</string>
+</resources>

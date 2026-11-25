@@ -1,0 +1,6 @@
+{
+  "name": "HopShield",
+  "description": "Multi-hop VPN client for Android with custom 2-hop and 3-hop relay chains, live TUN packet telemetry, split tunneling, and egress IP diagnostics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
