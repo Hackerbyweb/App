@@ -9,9 +9,17 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - uses: gradle/actions/setup-gradle@v4
-      - run: |
-          if [ -f gradlew ]; then chmod +x gradlew && ./gradlew assembleDebug; else gradle assembleDebug; fi
+      - name: Lihat isi repo
+        run: |
+          ls -la
+          find . -maxdepth 3 \( -name "gradlew" -o -name "build.gradle*" -o -name "settings.gradle*" -o -name "AndroidManifest.xml" -o -name "package.json" \) -not -path "./.git/*"
+      - name: Build
+        run: |
+          DIR=$(dirname "$(find . -maxdepth 3 -name gradlew -not -path './.git/*' | head -n 1)")
+          echo "Folder proyek: $DIR"
+          cd "$DIR"
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug
